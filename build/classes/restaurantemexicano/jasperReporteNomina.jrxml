@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f29b636b-7f40-4fb5-9b96-073bef82853f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     nomina_personal.`id_nomina_personal` AS nomina_personal_id_nomina_personal,
+     nomina_personal.`nombre` AS nomina_personal_nombre,
+     nomina_personal.`salario_base` AS nomina_personal_salario_base,
+     nomina_personal.`desempenio` AS nomina_personal_desempenio,
+     nomina_personal.`edad` AS nomina_personal_edad,
+     nomina_personal.`puesto` AS nomina_personal_puesto,
+     nomina_personal.`area` AS nomina_personal_area,
+     nomina_personal.`sueldo` AS nomina_personal_sueldo,
+     nomina_personal.`incentivo` AS nomina_personal_incentivo
+FROM
+     `nomina_personal` nomina_personal]]>
+	</queryString>
+	<field name="nomina_personal_id_nomina_personal" class="java.lang.Integer"/>
+	<field name="nomina_personal_nombre" class="java.lang.String"/>
+	<field name="nomina_personal_salario_base" class="java.lang.Float"/>
+	<field name="nomina_personal_desempenio" class="java.lang.Integer"/>
+	<field name="nomina_personal_edad" class="java.lang.Integer"/>
+	<field name="nomina_personal_puesto" class="java.lang.String"/>
+	<field name="nomina_personal_area" class="java.lang.String"/>
+	<field name="nomina_personal_sueldo" class="java.lang.Float"/>
+	<field name="nomina_personal_incentivo" class="java.lang.Float"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="0" width="595" height="64" uuid="d9f06cf9-cc75-4326-815d-7c4981d802fd"/>
+				<imageExpression><![CDATA["wood.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="5" width="263" height="33" uuid="c9068544-147f-4292-bd0b-54499dfa2341"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Reporte Nómina]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="63" y="39" width="200" height="22" forecolor="#FFFFFF" uuid="d207c636-9bf7-4aa6-9d44-0b130ff35916"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Wood SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="b1eb2776-0613-44bb-a772-4236d454da48"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="61" height="15" uuid="f6bafd49-c397-46da-bbe0-5353f3cb55a0"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="61" y="19" width="61" height="15" uuid="20bec142-8688-4fb8-894b-9ec125ec02f5"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="122" y="19" width="61" height="15" uuid="92ec51af-35e6-4924-bfab-a9cf25039eb3"/>
+				<text><![CDATA[S. Base]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="183" y="19" width="61" height="15" uuid="e40a36f9-5a12-4576-8d8b-c5fe1bf397a9"/>
+				<text><![CDATA[Desempeño]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="244" y="19" width="61" height="15" uuid="0ed3acf7-6a5e-4ca7-b465-c186d522dbc4"/>
+				<text><![CDATA[Edad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="305" y="19" width="61" height="15" uuid="97d3d85e-3dfd-4248-9241-467d56363931"/>
+				<text><![CDATA[Puesto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="366" y="19" width="61" height="15" uuid="ed2932fb-ea0e-48c9-bb80-a7ba5a636c75"/>
+				<text><![CDATA[Área]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="427" y="19" width="61" height="15" uuid="26da8f23-3beb-440a-8a90-571a141b9241"/>
+				<text><![CDATA[Sueldo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="488" y="19" width="61" height="15" uuid="ce4cdce0-9966-4ef5-ba28-1eafc9b779bf"/>
+				<text><![CDATA[Incentivo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="baf7ed7e-11d6-4e11-8e49-5db83d0ac3dc"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="61" height="15" uuid="7d70588d-ed9d-4b0b-b43e-d65ea50b0177"/>
+				<textFieldExpression><![CDATA[$F{nomina_personal_id_nomina_personal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="61" y="0" width="61" height="15" uuid="adf526b5-628b-4c85-9c7a-5075efa37752"/>
+				<textFieldExpression><![CDATA[$F{nomina_personal_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="122" y="0" width="61" height="15" uuid="4b422712-9d59-4900-8f3b-585d8399cb4c"/>
+				<textFieldExpression><![CDATA[$F{nomina_personal_salario_base}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="183" y="0" width="61" height="15" uuid="63965170-5892-4555-a09e-72528d818e26"/>
+				<textFieldExpression><![CDATA[$F{nomina_personal_desempenio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="244" y="0" width="61" height="15" uuid="4fce6844-c148-4172-ac6d-fe6134e4fc18"/>
+				<textFieldExpression><![CDATA[$F{nomina_personal_edad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="305" y="0" width="61" height="15" uuid="23c6bfff-a797-4213-82ba-37c405db3a8d"/>
+				<textFieldExpression><![CDATA[$F{nomina_personal_puesto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="366" y="0" width="61" height="15" uuid="52ca0f30-5332-4b21-a7f7-e59d57adfb2c"/>
+				<textFieldExpression><![CDATA[$F{nomina_personal_area}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="427" y="0" width="61" height="15" uuid="4c1ee70d-b6b5-4c90-8d1b-88617e782045"/>
+				<textFieldExpression><![CDATA[$F{nomina_personal_sueldo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="488" y="0" width="61" height="15" uuid="37082c6b-c87e-4d6f-808b-cc8155012da8"/>
+				<textFieldExpression><![CDATA[$F{nomina_personal_incentivo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="ac92da5f-3897-461c-8a24-0d3b251ccd48"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="d6e87e35-757d-40d9-8e1e-ca0edfe7288b"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="71e82ee0-b3fa-414a-b496-9b8c71b9c8cd"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="ed82d1bd-f6c1-4e16-b935-fb0609dddd6a"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

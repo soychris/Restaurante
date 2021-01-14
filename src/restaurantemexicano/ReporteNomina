@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b6899415-a2e6-4b02-93b3-de6d8c81fbac">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     nomina_personal.`id_nomina_personal` AS nomina_personal_id_nomina_personal,
+     nomina_personal.`nombre` AS nomina_personal_nombre,
+     nomina_personal.`salario_base` AS nomina_personal_salario_base,
+     nomina_personal.`desempenio` AS nomina_personal_desempenio,
+     nomina_personal.`edad` AS nomina_personal_edad,
+     nomina_personal.`puesto` AS nomina_personal_puesto,
+     nomina_personal.`area` AS nomina_personal_area,
+     nomina_personal.`sueldo` AS nomina_personal_sueldo,
+     nomina_personal.`incentivo` AS nomina_personal_incentivo
+FROM
+     `nomina_personal` nomina_personal]]>
+	</queryString>
+	<field name="nomina_personal_id_nomina_personal" class="java.lang.Integer"/>
+	<field name="nomina_personal_nombre" class="java.lang.String"/>
+	<field name="nomina_personal_salario_base" class="java.lang.Float"/>
+	<field name="nomina_personal_desempenio" class="java.lang.Integer"/>
+	<field name="nomina_personal_edad" class="java.lang.Integer"/>
+	<field name="nomina_personal_puesto" class="java.lang.String"/>
+	<field name="nomina_personal_area" class="java.lang.String"/>
+	<field name="nomina_personal_sueldo" class="java.lang.Float"/>
+	<field name="nomina_personal_incentivo" class="java.lang.Float"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
